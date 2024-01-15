@@ -1,6 +1,6 @@
 pipeline:
-  name: Helm Deploy from template
-  identifier: Helm_Deploy_from_template
+  name: testapirest
+  identifier: testapirest
   tags: {}
   template:
     templateRef: account.Pipeline_Helm_Deployment_template
