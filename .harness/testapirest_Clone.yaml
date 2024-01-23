@@ -1,0 +1,26 @@
+---
+pipeline:
+  tags: {}
+  template:
+    templateRef: "account.Pipeline_Helm_Deployment_template"
+    versionLabel: "1"
+    templateInputs:
+      stages:
+      - stage:
+          identifier: "Cd_Helm_Deploy_from_Template"
+          template:
+            templateInputs:
+              type: "Deployment"
+              spec:
+                environment:
+                  environmentRef: "<+input>"
+                  environmentInputs: "<+input>"
+                  serviceOverrideInputs: "<+input>"
+                  infrastructureDefinitions: "<+input>"
+                service:
+                  serviceRef: "<+input>"
+                  serviceInputs: "<+input>"
+  projectIdentifier: "Project_V2"
+  orgIdentifier: "default"
+  identifier: "testapirest_Clone"
+  name: "testapirest - Clone"
